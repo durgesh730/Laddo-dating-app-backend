@@ -1,15 +1,11 @@
 const mongoose = require("mongoose");
 
-const InterestSchema = mongoose.Schema(
-    {
-        title: {
-            type: String,
-        },
-        interest: [{
-            type: String
-        }
-        ]
+const InterestSchema = mongoose.Schema({
+
+    interest: {
+        type: String,
     },
+},
     {
         timestamps: true,
     }
