@@ -8,6 +8,8 @@ const ErrorHandler = require("../middlewares/error.middlewares"); // error handl
 //Routers
 const { UserRouter } = require("../routes/users.routes");
 const { CategoryRouter } = require("../routes/category.routes");
+const { InterestRouter } = require("../routes/interest.routes");
+const { IntersetCategoryRouter } = require("../routes/interestCategory.routes");
 
 module.exports = (app) => {
     app.use(express.json()); // body parser, parses request body
@@ -19,7 +21,8 @@ module.exports = (app) => {
     //start of routes
     app.use("/api/users", UserRouter);
     app.use('/api/category', CategoryRouter)
-
+    app.use('/api/interest', InterestRouter)
+    app.use('/api/interestcategory', IntersetCategoryRouter)
 
     //end of routes
 
